@@ -1,0 +1,26 @@
+{
+    "projects": [
+      {
+        "src": "ticket-search-frontend/package.json",
+        "use": "@vercel/static-build",
+        "config": {
+          "distDir": "build"
+        }
+      },
+      {
+        "src": "ticket-search-api/app.js",
+        "use": "@vercel/node"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/api/(.*)",
+        "dest": "/ticket-search-api/app.js"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "/ticket-search-frontend/build/$1"
+      }
+    ]
+  }
+  
