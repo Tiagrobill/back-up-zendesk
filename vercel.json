@@ -5,7 +5,7 @@
       "src": "ticket-search-frontend/package.json",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "build"
+        "distDir": "ticket-search-frontend/build"
       }
     },
     {
