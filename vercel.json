@@ -20,7 +20,7 @@
     },
     {
       "src": "/(.*)",
-      "dest": "/ticket-search-frontend/build/index.html"
+      "dest": "/ticket-search-frontend/build/$1"
     }
   ]
 }
