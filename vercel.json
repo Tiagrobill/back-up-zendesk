@@ -11,10 +11,7 @@
     },
     {
       "src": "ticket-search-api/app.js",
-      "use": "@vercel/node",
-      "config": {
-        "maxDuration": 10
-      }
+      "use": "@vercel/node"
     }
   ],
   "routes": [
