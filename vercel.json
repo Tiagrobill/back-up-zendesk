@@ -13,8 +13,8 @@
       }
     ],
     "routes": [
-      { "src": "/api/(.*)", "dest": "ticket-search-api/$1" },
-      { "src": "/(.*)", "dest": "ticket-search-front/$1" }
+      { "src": "^/api/(.*)", "dest": "ticket-search-api/$1" },
+      { "src": "^/(.*)", "dest": "ticket-search-front/$1" }
     ]
   }
   
