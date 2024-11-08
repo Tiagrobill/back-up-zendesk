@@ -1,15 +1,20 @@
 {
-    "projects": {
-      "frontend": {
-        "src": "ticket-search-front",
-        "buildCommand": "npm install && npm run build",
-        "outputDirectory": "ticket-search-front/build"
+    "builds": [
+      {
+        "src": "ticket-search-front/package.json",
+        "use": "@vercel/static-build",
+        "config": {
+          "distDir": "build"
+        }
       },
-      "backend": {
-        "src": "ticket-search-api",
-        "buildCommand": "npm install",
-        "outputDirectory": "ticket-search-api"
+      {
+        "src": "ticket-search-api/package.json",
+        "use": "@vercel/node"
       }
-    }
+    ],
+    "routes": [
+      { "src": "/api/(.*)", "dest": "ticket-search-api/$1" },
+      { "src": "/(.*)", "dest": "ticket-search-front/$1" }
+    ]
   }
   
