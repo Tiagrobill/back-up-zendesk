@@ -5,12 +5,16 @@
       "src": "ticket-search-frontend/package.json",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "ticket-search-frontend/build"
+        "distDir": "ticket-search-frontend/build",
+        "buildCommand": "npm install && npm run build"  
       }
     },
     {
       "src": "ticket-search-api/app.js",
-      "use": "@vercel/node"
+      "use": "@vercel/node",
+      "config": {
+        "maxDuration": 10
+      }
     }
   ],
   "routes": [
