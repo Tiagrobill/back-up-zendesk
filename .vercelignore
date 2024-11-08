@@ -1,0 +1,8 @@
+node_modules
+*.log
+*.csv
+*.png
+*.jpg
+*.jpeg
+*.mp4
+public/large-files/
